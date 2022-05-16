@@ -1,0 +1,8 @@
+prefix=/home/emsg/ws_2/devel
+
+Name: ros_mscl_py_example
+Description: Description of ros_mscl_py_example
+Version: 1.1.4
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

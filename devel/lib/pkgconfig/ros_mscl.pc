@@ -1,0 +1,8 @@
+prefix=/home/emsg/ws_2/devel
+
+Name: ros_mscl
+Description: Description of ros_mscl
+Version: 1.1.4
+Cflags: -I/home/emsg/ws_2/devel/include -I/home/emsg/ws_2/src/ros_mscl/include
+Libs: -L${prefix}/lib 
+Requires: roscpp cmake_modules tf2 tf2_ros tf2_geometry_msgs std_msgs std_srvs geometry_msgs sensor_msgs nav_msgs message_runtime mscl_msgs

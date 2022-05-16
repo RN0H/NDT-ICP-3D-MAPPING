@@ -1,0 +1,94 @@
+<launch>
+  
+  <node name="laser_tf_broadcaster_node" 
+  pkg="robot_setup_tf" 
+  type="laser_tf_broadcaster.py" 
+  output="screen"/>
+
+  <node name="laser_tf_listener_node" 
+  pkg="robot_setup_tf" 
+  type="laser_tf_listener.py" 
+  output="screen"/>
+
+
+  <!--  <node name="ekflistener" 
+  pkg="robot_setup_tf" 
+  type="ekflistener.py" 
+  output="screen"/>
+  
+  <node name="ekfbroadcaster" 
+  pkg="robot_setup_tf" 
+  type="ekfbroadcaster.py" 
+  output="screen"/>     -->
+
+  <node name="laser_tf_broadcaster_node2" 
+  pkg="robot_setup_tf" 
+  type="laser_tf_broadcaster2.py" 
+  output="screen"/>
+
+  <node name="laser_tf_listener_node2" 
+  pkg="robot_setup_tf" 
+  type="laser_tf_listener2.py" 
+  output="screen"/>
+
+
+
+  <node name="laser_geom_node" 
+  pkg="myquad" type="laser_geom.py" 
+  output="screen"/>
+  
+  <node name="ndt_icp" 
+  pkg="myquad" type="ndt_icp.py" 
+  output="screen"/>
+
+  <node name="ekf_node" 
+  pkg="myquad" type="ekfsub.py" 
+  output="screen"/>
+
+  <!--<node name="ndt" 
+  pkg="myquad" type="ndt.py" 
+  output="screen"/>-->
+  
+ <node name="groudtruth" 
+  pkg="myquad" type="groundtruth.py" 
+  output="screen"/>
+
+
+
+ <node pkg="robot_pose_ekf" type="robot_pose_ekf" name="robot_pose_ekf">
+    <param name="output_frame" value="odom"/>
+    <param name="freq" value="50"/>
+    <param name="sensor_timeout" value="1.0"/>
+    <param name="odom_used" value="true"/>
+    <param name="imu_used" value="true"/>
+    <param name="vo_used" value="true"/>
+    <param name="debug" value="false"/>
+    <param name="self_diagnose" value="false"/>
+  </node>
+
+  <node pkg="tf" type="static_transform_publisher" name="link1_broadcaster" args="0 0 0 0 0 0 1 base_footprint base_link 50 " />
+
+ <node name = "PlotJuggler" pkg = "plotjuggler" type = "plotjuggler" output = "screen" />
+
+ <!-- <node type="rviz" 
+  name="rviz" 
+  pkg="rviz" 
+  args="-d myquad/rviz/config_file.rviz" />-->
+
+<!-- <node pkg="octomap_server" type="octomap_server_node" name="octomap_server">
+    <param name="resolution" value="0.05" />
+    
+    
+    <param name="frame_id" type="string" value="imu_frame" />
+    
+    
+    <param name="sensor_model/max_range" value="15.0" />
+    
+    
+    <remap from="cloud_in" to="/pcl2" />
+  
+  </node>-->
+
+</launch>
+
+

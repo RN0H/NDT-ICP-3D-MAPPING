@@ -1,0 +1,2 @@
+set(mscl_msgs_MESSAGE_FILES "/home/emsg/ws_2/src/mscl_msgs/msg/FilterHeading.msg;/home/emsg/ws_2/src/mscl_msgs/msg/FilterHeadingState.msg;/home/emsg/ws_2/src/mscl_msgs/msg/FilterStatus.msg;/home/emsg/ws_2/src/mscl_msgs/msg/GNSSAidingStatus.msg;/home/emsg/ws_2/src/mscl_msgs/msg/GNSSDualAntennaStatus.msg;/home/emsg/ws_2/src/mscl_msgs/msg/GPSCorrelationTimestamp.msg;/home/emsg/ws_2/src/mscl_msgs/msg/GPSCorrelationTimestampStamped.msg;/home/emsg/ws_2/src/mscl_msgs/msg/RTKStatus.msg;/home/emsg/ws_2/src/mscl_msgs/msg/Status.msg")
+set(mscl_msgs_SERVICE_FILES "")

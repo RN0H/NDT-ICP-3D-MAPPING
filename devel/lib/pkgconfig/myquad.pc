@@ -1,0 +1,8 @@
+prefix=/home/emsg/ws_2/devel
+
+Name: myquad
+Description: Description of myquad
+Version: 0.0.0
+Cflags: -I/home/emsg/ws_2/devel/include
+Libs: -L${prefix}/lib 
+Requires: 

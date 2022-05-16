@@ -1,0 +1,15 @@
+<launch>
+  
+
+<node name="myquad_pub" 
+pkg="myquad" 
+type="myquad_pub" 
+output="screen"/>
+
+
+<node name="myquad_sub" 
+pkg="myquad" 
+type="myquad_sub" 
+output="screen"/>
+
+</launch>
